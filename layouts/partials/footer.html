@@ -1,0 +1,33 @@
+<div class="py-5 border-top">
+  <div class="container">
+
+    <p class="h5 mb-3">
+      {{ .Site.Title }}
+    </p>
+
+    <div class="row">
+
+      <div class="col-sm">
+        <ul class="list-unstyled">
+          <li>
+            {{ .Site.Params.author }} &copy; {{ now.Format "2006" }}
+          </li>
+          <li>
+            {{ partial "social.html" . }}
+          </li>
+          <li>
+            <span style="font-size: 0.8em;"><em>Ultimo aggiornamento: {{ now.Format "02/01/2006" }}</em></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm text-right">
+        <ul class="list-unstyled">
+          <li>{{ .Site.Params.description }}</li> 
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
