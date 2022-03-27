@@ -1,0 +1,10 @@
+{{ $width_left :=  .Get 0 }}
+{{ $width_right := .Get 1 }} 
+<div class="row">
+    <div class="col-{{ $width_left }}">
+      Left
+    </div>
+    <div class="col-{{ $width_right }}">
+      Right
+    </div>
+  </div>

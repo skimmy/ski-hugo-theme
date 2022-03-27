@@ -1,9 +1,19 @@
 {{ define "main" }}
-  <h1>Posts</h1>
-  {{ range .Pages }}
+  
+  <h1>
+    {{ with .Param "heading" }}
+      {{ . }}
+    {{ else }}
+      Argomenti
+    {{ end }}
+  </h1>
+
+  {{ range .Pages.ByWeight }}
     <article>
       <h2>{{ .Title }}</h2>
-      {{ .Summary }}
+      {{ .Summary }} <br />
+      <a href="{{ .Permalink }}">more...</a>
     </article>
   {{ end }}
+  
 {{ end }}
