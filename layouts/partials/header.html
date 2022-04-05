@@ -18,7 +18,7 @@
             </div>
           </li>
           {{ else }}
-            <li class="nav-item"><a class="nav-link" href="{{ .URL }}" role="button">{{ .Name }}</a></li>  
+            <li class="nav-item"><a class="nav-link" href="{{ .URL }}" role="button">{{ .Pre }} {{ .Name }} {{ .Post }}</a></li>  
           {{ end }}
         {{ end }}
         
