@@ -1,4 +1,4 @@
-{{ $default_head_img_url :=  print site.BaseURL "img/zuccante_it.jpeg" }}
+{{ $default_head_img_url :=  "img/zuccante_it.jpeg" | absURL  }}
 {{ .Scratch.Set "splash" $default_head_img_url}}
 {{ if .Params.splash }}
 {{ .Scratch.Set "splash" .Params.splash }}
