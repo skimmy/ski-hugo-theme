@@ -1,9 +1,3 @@
-{{ $default_head_img_url :=  "img/zuccante_it.jpeg" | absURL  }}
-{{ .Scratch.Set "splash" $default_head_img_url}}
-{{ if .Params.splash }}
-{{ .Scratch.Set "splash" .Params.splash }}
-{{ end }}
-{{ $head_img_url := .Scratch.Get "splash"}}
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
@@ -27,15 +21,8 @@
             <li class="nav-item"><a class="nav-link" href="{{ .URL }}" role="button">{{ .Pre }} {{ .Name }} {{ .Post }}</a></li>  
           {{ end }}
         {{ end }}
-        
     </ul>
   </div>
   </div>
 </nav>
-<div class="p-5 bg-primary" style="background-size: cover; background-position: center center; background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.6) 100%), url( {{$head_img_url}})">
-  <div class="container">
-  <h1 class="display-4 text-white">{{ .Title }}</h1>
-  </div>
-</div>
-
 </header>
