@@ -3,20 +3,7 @@
 {{ end }}
 {{ define "main" }}
 <main>
-  <div class="row">
-    <div class="col-10">
-      <aside>
-        {{ .TableOfContents }}
-      </aside>
-    </div>
-    <div class="col-2">
-      {{ with .Params.repo }}
-      <aside>
-        <a class="btn btn-outline-primary" href="{{ . }}" role="button" target="_blank"><i class="bi bi-github"></i> Source</a>
-      </aside>
-      {{ end }}
-    </div>
-  </div>
+  {{ partial "single-content-head.html" . }}
   <article>
     <div class="container" style="text-align: justify">
     {{ .Content }}
