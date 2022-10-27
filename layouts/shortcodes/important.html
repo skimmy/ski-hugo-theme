@@ -1,4 +1,4 @@
 <div class="alert alert-warning" markdown="1">
-    <strong><i class="bi bi-exclamation-octagon"></i> Importante{{ with .Get "title" }}: {{ . }}{{ end }}</strong></h5>
+    <h5><i class="bi bi-exclamation-octagon"></i> Importante{{ with .Get "title" }}: {{ . }}{{ end }}</h5>
     <p>{{ .Inner | markdownify }}</p>
 </div>
