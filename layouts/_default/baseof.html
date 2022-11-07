@@ -8,7 +8,8 @@
   <body>
     {{ block "header-nav" . }}{{ partial "header-nav.html" . }}{{ end }}
     {{ block "header-title" . }}{{ partial "header-title.html" . }}{{ end }}
-    <div class="container py-5">
+    {{ block "breadcrumb" . }}{{ end }}
+    <div class="container py-2">
       {{ block "main" . }}{{ end }}
     </div>
     {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
