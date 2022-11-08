@@ -2,5 +2,7 @@
 {{ with .Page }}
 {{ $base_path := .File.Dir }}
 {{ $full_file_path := (path.Join $base_path $file_path) }}
+<div class="py-3">
 {{ readFile $full_file_path | markdownify }}
+</div>
 {{ end }}

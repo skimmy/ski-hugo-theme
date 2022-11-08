@@ -1,5 +1,8 @@
+<div class="bg-light">
+
 <nav aria-label="breadcrumb mt-0">
-<ol class="breadcrumb px-5 border-bottom border-secondary">
+  <div class="container">  
+<ol class="breadcrumb">
     {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
   </ol>
   {{ define "breadcrumbnav" }}
@@ -24,3 +27,4 @@
   </li>
   {{ end }}
 </nav>
+</div>
