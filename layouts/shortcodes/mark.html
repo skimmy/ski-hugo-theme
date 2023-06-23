@@ -1,0 +1,8 @@
+{{ $text := .Inner }}
+{{ $color := .Get "color" }}
+
+{{ if $color }}
+  <mark style="background-color: {{ $color }}">{{ $text }}</mark>
+{{ else }}
+  <mark>{{ $text }}</mark>
+{{ end }}
